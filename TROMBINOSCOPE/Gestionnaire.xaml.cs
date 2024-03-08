@@ -33,7 +33,7 @@ namespace AppTrombinoscope
         {
             if(usernameInput.Text == "admin" && pwdInput.Text == "Password1234!")
             {
-                //log the user
+                AppCache.isGestionnaire = true;
                 Close();
             }
         }

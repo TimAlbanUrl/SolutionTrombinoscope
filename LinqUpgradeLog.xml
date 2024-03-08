@@ -2,17 +2,20 @@
 <?xml-stylesheet type='text/xsl' href='_LinqUpgradeReport_Files/LinqUpgradeReport.xslt'?>
 <LinqUpgradeLog>
 <Properties>
-<Property Name="Solution" Value="C:\Users\friboul221\Source\Repos\TimAlbanUrl\SolutionTrombinoscope\SolutionTrombinoscope.sln"></Property>
-<Property Name="Solution File" Value="C:\Users\friboul221\Source\Repos\TimAlbanUrl\SolutionTrombinoscope"></Property>
-<Property Name="Date" Value="08/03/2024 11:46:27"></Property>
+<Property Name="Solution" Value="C:\Users\ballu221\Source\Repos\TimAlbanUrl\SolutionTrombinoscope\SolutionTrombinoscope.sln"></Property>
+<Property Name="Solution File" Value="C:\Users\ballu221\Source\Repos\TimAlbanUrl\SolutionTrombinoscope"></Property>
+<Property Name="Date" Value="08/03/2024 12:14:51"></Property>
 </Properties>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="app.config" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.xaml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.xaml.cs" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="AppCache.cs" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="avatar-default-symbolic-icon-479x512-n8sg74wg.png" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="FenetreConnexionBDD.xaml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="FenetreConnexionBDD.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Gestionnaire.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Gestionnaire.xaml.cs" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="MainWindow.xaml" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="AppTrombinoscope" Source="MainWindow.xaml.cs" Description="No need to convert"></Event>
 <Event ErrorLevel="3" Project="DllbddPersonnels" Source="BddPersonnels.cs" Description="No need to convert"></Event>
