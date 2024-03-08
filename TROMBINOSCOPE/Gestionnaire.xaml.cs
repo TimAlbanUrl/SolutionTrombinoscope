@@ -31,7 +31,7 @@ namespace AppTrombinoscope
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(usernameInput.Text == "admin" && pwdInput.Text == "Password1234!")
+            if(usernameInput.Text == "admin" && pwdInput.Password.ToString() == "Password1234!")
             {
                 AppCache.isGestionnaire = true;
                 Close();
