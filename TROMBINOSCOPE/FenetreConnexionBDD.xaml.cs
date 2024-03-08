@@ -48,12 +48,20 @@ namespace AppTrombinoscope
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DialogResult = false;
+            this.Close();
         }
 
         private void Button_Save_Click(object sender, RoutedEventArgs e)
         {
-            AppCache.bdd = new DllbddPersonnels.BddPersonnels(username, password, adress, port);
+            try { AppCache.bdd = new DllbddPersonnels.BddPersonnels(username, password, adress, port); }
+            catch
+            {
+
+            }
+            
+            this.DialogResult = true;
+            this.Close();
         }
     }
 }

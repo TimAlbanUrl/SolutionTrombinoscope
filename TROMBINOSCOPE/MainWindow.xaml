@@ -19,7 +19,7 @@
             <MenuItem Header="_Gestion: Fonctions" />
             <MenuItem Header="_Gestion: Personnels" />
             <MenuItem Header="_Gestionnaire" FontWeight="Bold" />
-            <MenuItem Header="_Paramètre BDD" FontWeight="Bold" HorizontalAlignment="Right" />
+            <MenuItem Header="_Paramètre BDD" FontWeight="Bold" HorizontalAlignment="Right" Click="MenuItem_Click" />
         </Menu>
         <Grid HorizontalAlignment="Left" Height="320" Margin="23,52,0,0" VerticalAlignment="Top" Width="545">
             <Grid.RowDefinitions>
