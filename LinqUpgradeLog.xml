@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_LinqUpgradeReport_Files/LinqUpgradeReport.xslt'?>
+<LinqUpgradeLog>
+<Properties>
+<Property Name="Solution" Value="C:\Users\friboul221\Source\Repos\TimAlbanUrl\SolutionTrombinoscope\SolutionTrombinoscope.sln"></Property>
+<Property Name="Solution File" Value="C:\Users\friboul221\Source\Repos\TimAlbanUrl\SolutionTrombinoscope"></Property>
+<Property Name="Date" Value="08/03/2024 11:46:27"></Property>
+</Properties>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="app.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="AppCache.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="FenetreConnexionBDD.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="FenetreConnexionBDD.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="MainWindow.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="MainWindow.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="BddPersonnels.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContextbddpersonnels.lqml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContextbddpersonnels.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContextbddpersonnels.Diagram1.view" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContextbddpersonnels.edps" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="Properties" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+
+</LinqUpgradeLog>
