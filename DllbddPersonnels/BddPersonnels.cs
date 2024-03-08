@@ -12,8 +12,8 @@ namespace DllbddPersonnels
     public class BddPersonnels
     {
         public BddpersonnelDataContext bdd;
-        public BddPersonnels(String user, String mdp, String serveurIp) {
-            bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + mdp + ";Host=" + serveurIp + ";Port=3306;Database=bddpersonnels;Persist Security Info=True");
+        public BddPersonnels(String user, String mdp, String serveurIp,String port) {
+            bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + mdp + ";Host=" + serveurIp + ";Port="+port+";Database=bddpersonnels;Persist Security Info=True");
         }
        
     }
