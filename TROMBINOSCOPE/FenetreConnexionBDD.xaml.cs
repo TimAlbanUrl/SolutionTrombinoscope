@@ -18,7 +18,7 @@ namespace AppTrombinoscope
     /// <summary>
     /// Logique d'interaction pour FenetreConnexionBDD.xaml
     /// </summary>
-    public partial class FenetreConnexionBDD : UserControl
+    public partial class FenetreConnexionBDD : Window
     {
         public FenetreConnexionBDD()
         {
