@@ -18,7 +18,7 @@
             <MenuItem Header="_Gestion: Services" />
             <MenuItem Header="_Gestion: Fonctions" />
             <MenuItem Header="_Gestion: Personnels" />
-            <MenuItem Header="_Gestionnaire" FontWeight="Bold" />
+            <MenuItem Name="headerGestionnaire" Header="_Gestionnaire" FontWeight="Bold" Height="24" VerticalAlignment="Top" Click="headerGestionnaire_Click" />
             <MenuItem Header="_Paramètre BDD" FontWeight="Bold" HorizontalAlignment="Right" />
         </Menu>
         <Grid HorizontalAlignment="Left" Height="320" Margin="23,52,0,0" VerticalAlignment="Top" Width="545">

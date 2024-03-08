@@ -20,5 +20,11 @@ namespace TROMBINOSCOPE
         {
             InitializeComponent();
         }
+
+        private void headerGestionnaire_Click(object sender, RoutedEventArgs e)
+        {
+            AppTrombinoscope.Gestionnaire GestionnaireView = new AppTrombinoscope.Gestionnaire();
+            GestionnaireView.Show();
+        }
     }
 }
