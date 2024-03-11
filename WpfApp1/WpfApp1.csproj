@@ -74,9 +74,16 @@
     <Compile Include="FenetreConnexionBDD.xaml.cs">
       <DependentUpon>FenetreConnexionBDD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GestionFonction.xaml.cs">
+      <DependentUpon>GestionFonction.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gestionnaire.xaml.cs">
       <DependentUpon>Gestionnaire.xaml</DependentUpon>
     </Compile>
+    <Page Include="GestionFonction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

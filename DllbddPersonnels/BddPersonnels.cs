@@ -19,9 +19,44 @@ namespace DllbddPersonnels
         {
             bdd = new BddpersonnelDataContext();
         }
-       public List<Service> fetchAllServices()
+        public List<Service> fetchAllServices()
         {
             return bdd.Services.ToList();
+        }
+
+        public List<Fonction> fetchAllFonctions()
+        {
+            return bdd.Fonctions.ToList();
+        }
+
+        public void UpdateService(Object obj, String intitule)
+        {
+            Service serv = (Service)obj;
+            serv.Intitule = intitule;
+            bdd.SubmitChanges();
+        }
+
+        public void UpdateFonction(Object obj, String intitule)
+        {
+            Fonction fonc = (Fonction)obj;
+            fonc.Intitule = intitule;
+            bdd.SubmitChanges();
+        }
+
+        public void DeleteService(Object obj)
+        {
+            Service serv = (Service)obj;
+            var serv2 = bdd.Services.Single(Service => Service.Id == serv.Id);
+            bdd.Services.DeleteOnSubmit(serv2);
+            bdd.SubmitChanges();
+        }
+
+        public void DeleteFonction(Object obj)
+        {
+            Fonction fonc = (Fonction)obj;
+            var fonc2 = bdd.Fonctions.Single(Fonction => Fonction.Id == fonc.Id);
+            bdd.Fonctions.DeleteOnSubmit(fonc2);
+            bdd.SubmitChanges();
         }
     }
 }
