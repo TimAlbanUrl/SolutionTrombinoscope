@@ -49,6 +49,12 @@ namespace WpfApp1
             UpdateList();
         }
 
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            bdd.InsertFonction(CreateInput.Text);
+            UpdateList();
+        }
+
         private void UpdateList()
         {
             List<BddpersonnelContext.Fonction> listeFonctions = bdd.fetchAllFonctions();

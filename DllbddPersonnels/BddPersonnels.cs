@@ -58,5 +58,22 @@ namespace DllbddPersonnels
             bdd.Fonctions.DeleteOnSubmit(fonc2);
             bdd.SubmitChanges();
         }
+
+        public void InsertService(string intitule)
+        {
+            Service serv = new Service();
+            serv.Id = 0;
+            serv.Intitule = intitule;
+            bdd.Services.InsertOnSubmit(serv);
+            bdd.SubmitChanges();
+        }
+        public void InsertFonction(string intitule)
+        {
+            Fonction fonc = new Fonction();
+            fonc.Id = 0;
+            fonc.Intitule = intitule;
+            bdd.Fonctions.InsertOnSubmit(fonc);
+            bdd.SubmitChanges();
+        }
     }
 }

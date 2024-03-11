@@ -31,7 +31,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Content="Nom : " HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <TextBox x:Name="CreateInput" Grid.Column="1" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-                    <Button x:Name="CreateButton" Content="Créer" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75"/>
+                    <Button x:Name="CreateButton" Content="Créer" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75" Click="CreateButton_Click"/>
                 </Grid>
             </GroupBox>
             <GroupBox DataContext="{Binding ElementName=FonctionList, Path=SelectedItem}" Grid.Column="1" Header="Modifier" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="505">
