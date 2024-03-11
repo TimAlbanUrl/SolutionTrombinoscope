@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-         Title="Trombinoscope" Height="450" Width="800">
+         Title="Trombinoscope" Height="450" Width="850" MaxWidth="850" MinWidth="850" MinHeight="400">
     <Grid Background="#FFD3EAE0">
         <Menu Height="24" VerticalAlignment="Top" Width="800" Background="#FFF0F0F0">
             <Menu.ItemsPanel>
@@ -21,7 +21,7 @@
             <MenuItem Name="Gestionnaire" Header="_Gestionnaire" FontWeight="Bold" Click="Gestionnaire_Click" />
             <MenuItem Header="_Paramètre BDD" FontWeight="Bold" HorizontalAlignment="Right" Click="MenuItem_Click" />
         </Menu>
-        <Grid HorizontalAlignment="Left" Height="320" Margin="23,52,0,0" VerticalAlignment="Top" Width="545">
+        <Grid HorizontalAlignment="Left" Margin="23,52,0,47" Width="545">
             <Grid.RowDefinitions>
                 <RowDefinition Height="17*"/>
                 <RowDefinition Height="63*"/>
@@ -34,7 +34,7 @@
             <Label Content="Services" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" />
             <Label Content="Fonctions" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
             <Label Content="Membres" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
-            <ListView x:Name="ServiceList" Grid.Row="1" Margin="10,0,10,0" DisplayMemberPath="Intitule" Height="252" VerticalAlignment="Top"/>
+            <ListView x:Name="ServiceList" Grid.Row="1" Margin="10,0,10,0" DisplayMemberPath="Intitule"/>
             <ListBox Grid.Column="1" Grid.Row="1" Margin="10,0,10,0"/>
             <ListBox Grid.Column="2" Grid.Row="1" Margin="10,0,10,0"/>
         </Grid>
