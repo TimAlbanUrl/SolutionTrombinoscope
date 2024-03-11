@@ -22,6 +22,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         private BddPersonnels bdd;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace WpfApp1
                 MessageBox.Show(ex.Message, "Erreur lors de l'ouverture des parametres !");
             }
         }
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e) //parametre bdd
         {
             try
             {
@@ -62,7 +63,7 @@ namespace WpfApp1
             }
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e) //connexion bdd
         {
             try
             {
@@ -76,6 +77,12 @@ namespace WpfApp1
             {
                 MessageBox.Show(ex.Message, "Erreur lors de la connexion");
             }
+        }
+
+        private void Gestionnaire_Click(object sender, RoutedEventArgs e)
+        {
+            Gestionnaire gest = new Gestionnaire();
+            gest.Show();
         }
     }
 }
