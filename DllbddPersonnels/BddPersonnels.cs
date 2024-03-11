@@ -23,5 +23,22 @@ namespace DllbddPersonnels
         {
             return bdd.Services.ToList();
         }
+
+        public List<Personnel> fetchAllPersonnel()
+        {
+            return bdd.Personnels.ToList();
+        }
+
+        public void DeletePersonnel(Personnel p)
+        {
+            bdd.Personnels.DeleteOnSubmit(p);
+            bdd.SubmitChanges();
+        }
+        public void UpdatePersonnel(Personnel p , string nom, string prenom)
+        {
+            p.Nom = nom;
+            p.Prenom = prenom;
+            bdd.SubmitChanges();
+        }
     }
 }

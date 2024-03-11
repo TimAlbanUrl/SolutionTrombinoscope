@@ -17,7 +17,7 @@
             <MenuItem Header="_Liste du Personnel" />
             <MenuItem Header="_Gestion: Services" />
             <MenuItem Header="_Gestion: Fonctions" />
-            <MenuItem Header="_Gestion: Personnels" />
+            <MenuItem Header="_Gestion: Personnels" Click="MenuItem_Click_2" />
             <MenuItem Name="Gestionnaire" Header="_Gestionnaire" FontWeight="Bold" Click="Gestionnaire_Click" />
             <MenuItem Header="_Paramètre BDD" FontWeight="Bold" HorizontalAlignment="Right" Click="MenuItem_Click" />
         </Menu>

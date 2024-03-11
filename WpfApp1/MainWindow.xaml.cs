@@ -84,5 +84,11 @@ namespace WpfApp1
             Gestionnaire gest = new Gestionnaire();
             gest.Show();
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            Personnels p = new Personnels();
+            p.Show();
+        }
     }
 }
