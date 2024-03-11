@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppTrombinoscope.Properties {
+namespace Deprecated.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
