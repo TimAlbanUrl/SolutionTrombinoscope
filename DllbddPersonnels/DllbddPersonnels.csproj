@@ -55,23 +55,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BddPersonnels.cs" />
-    <Compile Include="DataContextbddpersonnels.Designer.cs">
+    <Compile Include="BddPersonnelsDataContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataContextbddpersonnels.lqml</DependentUpon>
+      <DependentUpon>BddPersonnelsDataContext.lqml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataContextbddpersonnels.Diagram1.view">
-      <DependentUpon>DataContextbddpersonnels.lqml</DependentUpon>
+    <None Include="BddPersonnelsDataContext.Diagram1.view">
+      <DependentUpon>BddPersonnelsDataContext.lqml</DependentUpon>
     </None>
-    <None Include="DataContextbddpersonnels.edps">
-      <DependentUpon>DataContextbddpersonnels.lqml</DependentUpon>
+    <None Include="BddPersonnelsDataContext.edps">
+      <DependentUpon>BddPersonnelsDataContext.lqml</DependentUpon>
     </None>
-    <None Include="DataContextbddpersonnels.lqml">
+    <None Include="BddPersonnelsDataContext.lqml">
       <Generator>DevartLinqToSqlGenerator</Generator>
-      <LastGenOutput>DataContextbddpersonnels.Designer.cs</LastGenOutput>
+      <LastGenOutput>BddPersonnelsDataContext.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

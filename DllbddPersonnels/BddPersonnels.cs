@@ -15,6 +15,13 @@ namespace DllbddPersonnels
         public BddPersonnels(String user, String mdp, String serveurIp,String port) {
             bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + mdp + ";Host=" + serveurIp + ";Port="+port+";Database=bddpersonnels;Persist Security Info=True");
         }
-       
+        public BddPersonnels()
+        {
+            bdd = new BddpersonnelDataContext();
+        }
+       public List<Service> fetchAllServices()
+        {
+            return bdd.Services.ToList();
+        }
     }
 }

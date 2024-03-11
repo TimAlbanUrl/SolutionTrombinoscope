@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.9.34622.214
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTrombinoscope", "TROMBINOSCOPE\AppTrombinoscope.csproj", "{4F0F47A8-E685-4C6F-8061-9571828A5507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deprecated", "TROMBINOSCOPE\Deprecated.csproj", "{4F0F47A8-E685-4C6F-8061-9571828A5507}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DllbddPersonnels", "DllbddPersonnels\DllbddPersonnels.csproj", "{6BA6052D-1D0A-4CFE-A0F1-9A506DB7119C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{7C023CFF-7367-4A9B-A943-0E8429081961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6BA6052D-1D0A-4CFE-A0F1-9A506DB7119C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA6052D-1D0A-4CFE-A0F1-9A506DB7119C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA6052D-1D0A-4CFE-A0F1-9A506DB7119C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C023CFF-7367-4A9B-A943-0E8429081961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C023CFF-7367-4A9B-A943-0E8429081961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C023CFF-7367-4A9B-A943-0E8429081961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C023CFF-7367-4A9B-A943-0E8429081961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
