@@ -90,5 +90,11 @@ namespace WpfApp1
             GestionFonction gestFonc = new GestionFonction();
             gestFonc.Show();
         }
+
+        private void ManageServices_Click(object sender, RoutedEventArgs e)
+        {
+            GestionService gestServ = new GestionService();
+            gestServ.Show();
+        }
     }
 }

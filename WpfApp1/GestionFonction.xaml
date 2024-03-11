@@ -29,7 +29,7 @@
                         <ColumnDefinition Width="238*"/>
                         <ColumnDefinition Width="237*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Nom : " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Content="Intitulé : " HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <TextBox x:Name="CreateInput" Grid.Column="1" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
                     <Button x:Name="CreateButton" Content="Créer" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75" Click="CreateButton_Click"/>
                 </Grid>
@@ -45,7 +45,7 @@
                         <ColumnDefinition Width="238*"/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="ModifiyButton" Content="Modifier" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75" Click="ModifiyButton_Click"/>
-                    <Label Content="Nom :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Content="Intitulé :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <TextBox x:Name="ModifyInput" Grid.Column="1" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="{Binding Mode=OneWay, Path=Intitule}" VerticalAlignment="Center" Width="120"/>
                 </Grid>
             </GroupBox>

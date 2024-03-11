@@ -15,7 +15,7 @@
             </Menu.ItemsPanel>
             <MenuItem Header="_Connexion BDD" FontWeight="Bold" Click="MenuItem_Click_1" />
             <MenuItem Header="_Liste du Personnel" />
-            <MenuItem Header="_Gestion: Services" />
+            <MenuItem x:Name="ManageServices" Header="_Gestion: Services" Click="ManageServices_Click" />
             <MenuItem x:Name="ManageFunctions" Header="_Gestion: Fonctions" Click="ManageFunctions_Click" />
             <MenuItem Header="_Gestion: Personnels" />
             <MenuItem Name="Gestionnaire" Header="_Gestionnaire" FontWeight="Bold" Click="Gestionnaire_Click" />
@@ -34,7 +34,7 @@
             <Label Content="Services" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" />
             <Label Content="Fonctions" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
             <Label Content="Membres" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
-            <ListView x:Name="ServiceList" Grid.Row="1" Margin="10,0,10,0" DisplayMemberPath="Intitule"/>
+            <ListView x:Name="ServiceList" Grid.Row="1" Margin="10,0,10,0" DisplayMemberPath="Intitule" Height="252" VerticalAlignment="Top"/>
             <ListBox Grid.Column="1" Grid.Row="1" Margin="10,0,10,0"/>
             <ListBox Grid.Column="2" Grid.Row="1" Margin="10,0,10,0"/>
         </Grid>

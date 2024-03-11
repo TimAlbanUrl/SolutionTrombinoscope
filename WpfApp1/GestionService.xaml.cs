@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Logique d'interaction pour GestionFonction.xaml
+    /// Logique d'interaction pour GestionService.xaml
     /// </summary>
-    public partial class GestionFonction : Window
+    public partial class GestionService : Window
     {
         private BddPersonnels bdd;
 
-        public GestionFonction()
+        public GestionService()
         {
             InitializeComponent();
             try
@@ -38,29 +38,29 @@ namespace WpfApp1
             }
         }
 
-        private void ModifiyButton_Click(object sender, RoutedEventArgs e)
+        private void UpdateList()
         {
-            bdd.UpdateFonction(FonctionList.SelectedItem, ModifyInput.Text);
+            List<BddpersonnelContext.Service> listeServices = bdd.fetchAllServices();
+            ServiceList.ItemsSource = listeServices;
+        }
+
+        private void ModifyButton_Click(object sender, RoutedEventArgs e)
+        {
+            bdd.UpdateService(ServiceList.SelectedItem, ModifyInput.Text);
             ModifyInput.Text = "";
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            bdd.DeleteFonction(FonctionList.SelectedItem);
+            bdd.DeleteService(ServiceList.SelectedItem);
             UpdateList();
         }
 
-        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        private void CreteButton_Click(object sender, RoutedEventArgs e)
         {
-            bdd.InsertFonction(CreateInput.Text);
+            bdd.InsertService(CreateInput.Text);
             UpdateList();
             CreateInput.Text = "";
-        }
-
-        private void UpdateList()
-        {
-            List<BddpersonnelContext.Fonction> listeFonctions = bdd.fetchAllFonctions();
-            FonctionList.ItemsSource = listeFonctions;
         }
     }
 }
