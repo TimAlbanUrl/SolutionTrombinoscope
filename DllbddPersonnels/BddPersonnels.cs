@@ -50,6 +50,13 @@ namespace DllbddPersonnels
             bdd.SubmitChanges();
         }
 
+        public void UpdatePersonnel(Personnel p, string nom, string prenom)
+        {
+            p.Nom = nom;
+            p.Prenom = prenom;
+            bdd.SubmitChanges();
+        }
+
         public void DeleteService(Object obj)
         {
             Service serv = (Service)obj;
@@ -63,6 +70,14 @@ namespace DllbddPersonnels
             Fonction fonc = (Fonction)obj;
             var fonc2 = bdd.Fonctions.Single(Fonction => Fonction.Id == fonc.Id);
             bdd.Fonctions.DeleteOnSubmit(fonc2);
+            bdd.SubmitChanges();
+        }
+
+        public void DeletePersonnel(Object obj)
+        {
+            Personnel pers = (Personnel)obj;
+            var pers2 = bdd.Personnels.Single(Personnel => Personnel.Id == pers.Id);
+            bdd.Personnels.DeleteOnSubmit(pers2);
             bdd.SubmitChanges();
         }
 

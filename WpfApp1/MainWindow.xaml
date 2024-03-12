@@ -14,7 +14,7 @@
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
             <MenuItem Header="_Connexion BDD" FontWeight="Bold" Click="MenuItem_Click_1" />
-            <MenuItem Header="_Liste du Personnel" />
+            <MenuItem x:Name="StaffList" Header="_Liste du Personnel" Click="StaffList_Click" />
             <MenuItem x:Name="ManageServices" Header="_Gestion: Services" Click="ManageServices_Click" />
             <MenuItem x:Name="ManageFunctions" Header="_Gestion: Fonctions" Click="ManageFunctions_Click" />
             <MenuItem Header="_Gestion: Personnels" />

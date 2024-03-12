@@ -66,6 +66,12 @@ namespace WpfApp1
             }
         }
 
+        private void StaffList_Click(object sender, RoutedEventArgs e)
+        {
+            Personnels pers = new Personnels();
+            pers.Show();
+        }
+
         private void MenuItem_Click_1(object sender, RoutedEventArgs e) //connexion bdd
         {
             try
