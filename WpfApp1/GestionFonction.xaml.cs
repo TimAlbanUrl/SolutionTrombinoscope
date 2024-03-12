@@ -59,7 +59,7 @@ namespace WpfApp1
 
         private void UpdateList()
         {
-            List<BddpersonnelContext.Fonction> listeFonctions = bdd.fetchAllFonctions();
+            List<BddpersonnelContext.Fonction> listeFonctions = bdd.FetchAllFonctions();
             FonctionList.ItemsSource = listeFonctions;
         }
     }

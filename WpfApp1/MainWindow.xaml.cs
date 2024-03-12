@@ -31,8 +31,11 @@ namespace WpfApp1
                 bdd = new BddPersonnels(Properties.Settings.Default.Username,
                 Properties.Settings.Default.Password,Properties.Settings.Default.IP,
                 Properties.Settings.Default.Port );
-                List<BddpersonnelContext.Service> listeServices = bdd.fetchAllServices();
-                this.ServiceList.ItemsSource = listeServices;
+                List<BddpersonnelContext.Service> listeServices = bdd.FetchAllServices();
+                List<BddpersonnelContext.Fonction> listeFonctions = bdd.FetchAllFonctions();
+                ServiceList.ItemsSource = listeServices;
+                FonctionList.ItemsSource = listeFonctions;
+                updatePersonnelsList();
             }
             catch (Exception ex)
             {
@@ -70,7 +73,7 @@ namespace WpfApp1
                 bdd = new BddPersonnels(Properties.Settings.Default.Username,
                 Properties.Settings.Default.Password, Properties.Settings.Default.IP,
                 Properties.Settings.Default.Port);
-                List<BddpersonnelContext.Service> listeServices = bdd.fetchAllServices();
+                List<BddpersonnelContext.Service> listeServices = bdd.FetchAllServices();
                 this.ServiceList.ItemsSource = listeServices;
             }
             catch (Exception ex)
@@ -95,6 +98,36 @@ namespace WpfApp1
         {
             GestionService gestServ = new GestionService();
             gestServ.Show();
+        }
+
+        private void DeleteSelectionServ_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceList.SelectedItem = null;
+        }
+
+        private void DeleteSelectionFonc_Click(object sender, RoutedEventArgs e)
+        {
+            FonctionList.SelectedItem = null;
+        }
+
+        private void InputNom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            updatePersonnelsList();
+        }
+
+        private void updatePersonnelsList()
+        {
+            PersonnelList.ItemsSource = bdd.SelectPersonnels(ServiceList.SelectedItem, FonctionList.SelectedItem, InputNom.Text);
+        }
+
+        private void ServiceList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            updatePersonnelsList();
+        }
+
+        private void FonctionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            updatePersonnelsList();
         }
     }
 }

@@ -23,20 +23,25 @@
         </Menu>
         <Grid HorizontalAlignment="Left" Margin="23,52,0,47" Width="545">
             <Grid.RowDefinitions>
-                <RowDefinition Height="17*"/>
-                <RowDefinition Height="63*"/>
+                <RowDefinition Height="68*"/>
+                <RowDefinition Height="223*"/>
+                <RowDefinition Height="29*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="181*"/>
                 <ColumnDefinition Width="183*"/>
                 <ColumnDefinition Width="181*"/>
             </Grid.ColumnDefinitions>
-            <Label Content="Services" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" />
-            <Label Content="Fonctions" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
-            <Label Content="Membres" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
-            <ListView x:Name="ServiceList" Grid.Row="1" Margin="10,0,10,0" DisplayMemberPath="Intitule"/>
-            <ListBox Grid.Column="1" Grid.Row="1" Margin="10,0,10,0"/>
-            <ListBox Grid.Column="2" Grid.Row="1" Margin="10,0,10,0"/>
+            <Label Content="Services" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" Margin="62,21,63,21" Height="26" Width="56" />
+            <Label Content="Fonctions" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Margin="59,21" Height="26" Width="65" />
+            <Label Content="Membres" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Margin="59,21" Height="26" Width="63" />
+            <ListView x:Name="ServiceList" Grid.Row="1" Margin="10,0,10,0" DisplayMemberPath="Intitule" SelectionChanged="ServiceList_SelectionChanged" />
+            <ListView x:Name="FonctionList" Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" DisplayMemberPath="Intitule" SelectionChanged="FonctionList_SelectionChanged"/>
+            <ListView x:Name="PersonnelList" Grid.Row="1" Grid.Column="2" Margin="10,0,10,0" DisplayMemberPath="Nom"/>
+            <Button x:Name="DeleteSelectionServ" Content="Supprimer la séléction" Grid.Row="2" VerticalAlignment="Center" Width="161" HorizontalAlignment="Center" Margin="10,5,10,4" Click="DeleteSelectionServ_Click"/>
+            <Button x:Name="DeleteSelectionFonc" Content="Supprimer la séléction" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="163" Margin="10,5,10,4" Click="DeleteSelectionFonc_Click"/>
+            <TextBox x:Name="InputNom" Grid.Column="2" HorizontalAlignment="Center" Height="23" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="161" Margin="10,3" TextChanged="InputNom_TextChanged"/>
+
         </Grid>
         <Grid HorizontalAlignment="Left" Height="320" Margin="581,52,0,0" VerticalAlignment="Top" Width="190">
             <Grid.RowDefinitions>

@@ -15,18 +15,25 @@ namespace DllbddPersonnels
         public BddPersonnels(String user, String mdp, String serveurIp,String port) {
             bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + mdp + ";Host=" + serveurIp + ";Port="+port+";Database=bddpersonnels;Persist Security Info=True");
         }
+
         public BddPersonnels()
         {
             bdd = new BddpersonnelDataContext();
         }
-        public List<Service> fetchAllServices()
+
+        public List<Service> FetchAllServices()
         {
             return bdd.Services.ToList();
         }
 
-        public List<Fonction> fetchAllFonctions()
+        public List<Fonction> FetchAllFonctions()
         {
             return bdd.Fonctions.ToList();
+        }
+
+        public List<Personnel> FetchAllPersonnels()
+        {
+            return bdd.Personnels.ToList();
         }
 
         public void UpdateService(Object obj, String intitule)
@@ -74,6 +81,71 @@ namespace DllbddPersonnels
             fonc.Intitule = intitule;
             bdd.Fonctions.InsertOnSubmit(fonc);
             bdd.SubmitChanges();
+        }
+
+        public List<Personnel> SelectPersonnels(Object servObj, Object foncObj, String nom)
+        {
+            Service serv;
+            Fonction fonc;
+            System.Linq.IQueryable<BddpersonnelContext.Personnel> query;
+            if (servObj != null)
+            {
+                serv = (Service)servObj;
+                if (foncObj != null)
+                {
+                    fonc = (Fonction)foncObj;
+                    if (nom != "") // either "" or null
+                    {
+                        query = from pers in bdd.Personnels
+                                where pers.IdService == serv.Id
+                                where pers.IdFonction == fonc.Id
+                                where pers.Nom.Contains(nom)
+                                select pers;
+                        return query.ToList();
+                    }
+                    query = from pers in bdd.Personnels
+                            where pers.IdService == serv.Id
+                            where pers.IdFonction == fonc.Id
+                            select pers;
+                    return query.ToList();
+                }
+                if (nom != "") // either "" or null
+                {
+                    query = from pers in bdd.Personnels
+                            where pers.IdService == serv.Id
+                            where pers.Nom.Contains(nom)
+                            select pers;
+                    return query.ToList();
+                }
+                query = from pers in bdd.Personnels
+                        where pers.IdService == serv.Id
+                        select pers;
+                return query.ToList();
+            }
+            if (foncObj != null)
+            {
+                fonc = (Fonction)foncObj;
+                if (nom != "") // either "" or null
+                {
+                    query = from pers in bdd.Personnels
+                            where pers.IdFonction == fonc.Id
+                            where pers.Nom.Contains(nom)
+                            select pers;
+                    return query.ToList();
+                }
+                query = from pers in bdd.Personnels
+                        where pers.IdFonction == fonc.Id
+                        select pers;
+                return query.ToList();
+            }
+            if (nom != "") // either "" or null
+            {
+                query = from pers in bdd.Personnels
+                        where pers.Nom.Contains(nom)
+                        select pers;
+                return query.ToList();
+            }
+            return FetchAllPersonnels();
         }
     }
 }

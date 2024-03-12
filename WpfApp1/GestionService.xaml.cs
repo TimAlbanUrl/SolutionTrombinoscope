@@ -40,7 +40,7 @@ namespace WpfApp1
 
         private void UpdateList()
         {
-            List<BddpersonnelContext.Service> listeServices = bdd.fetchAllServices();
+            List<BddpersonnelContext.Service> listeServices = bdd.FetchAllServices();
             ServiceList.ItemsSource = listeServices;
         }
 
