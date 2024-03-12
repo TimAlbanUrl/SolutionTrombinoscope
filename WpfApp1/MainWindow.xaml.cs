@@ -135,5 +135,11 @@ namespace WpfApp1
         {
             updatePersonnelsList();
         }
+
+        private void PersonnelList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TextBoxService.Text = bdd.GetServiceIntituleFromPersonnel(PersonnelList.SelectedItem);
+            TextBoxFonction.Text = bdd.GetFonctionIntituleFromPersonnel(PersonnelList.SelectedItem);
+        }
     }
 }
