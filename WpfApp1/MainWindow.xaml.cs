@@ -22,6 +22,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         private BddPersonnels bdd;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,15 +31,18 @@ namespace WpfApp1
                 bdd = new BddPersonnels(Properties.Settings.Default.Username,
                 Properties.Settings.Default.Password,Properties.Settings.Default.IP,
                 Properties.Settings.Default.Port );
-                List<BddpersonnelContext.Service> listeServices = bdd.fetchAllServices();
-                this.ServiceList.ItemsSource = listeServices;
+                List<BddpersonnelContext.Service> listeServices = bdd.FetchAllServices();
+                List<BddpersonnelContext.Fonction> listeFonctions = bdd.FetchAllFonctions();
+                ServiceList.ItemsSource = listeServices;
+                FonctionList.ItemsSource = listeFonctions;
+                updatePersonnelsList();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erreur lors de l'ouverture des parametres !");
             }
         }
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e) //parametre bdd
         {
             try
             {
@@ -62,20 +66,74 @@ namespace WpfApp1
             }
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void StaffList_Click(object sender, RoutedEventArgs e)
+        {
+            Personnels pers = new Personnels();
+            pers.Show();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e) //connexion bdd
         {
             try
             {
                 bdd = new BddPersonnels(Properties.Settings.Default.Username,
                 Properties.Settings.Default.Password, Properties.Settings.Default.IP,
                 Properties.Settings.Default.Port);
-                List<BddpersonnelContext.Service> listeServices = bdd.fetchAllServices();
+                List<BddpersonnelContext.Service> listeServices = bdd.FetchAllServices();
                 this.ServiceList.ItemsSource = listeServices;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erreur lors de la connexion");
             }
+        }
+
+        private void Gestionnaire_Click(object sender, RoutedEventArgs e)
+        {
+            Gestionnaire gest = new Gestionnaire();
+            gest.Show();
+        }
+
+        private void ManageFunctions_Click(object sender, RoutedEventArgs e)
+        {
+            GestionFonction gestFonc = new GestionFonction();
+            gestFonc.Show();
+        }
+
+        private void ManageServices_Click(object sender, RoutedEventArgs e)
+        {
+            GestionService gestServ = new GestionService();
+            gestServ.Show();
+        }
+
+        private void DeleteSelectionServ_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceList.SelectedItem = null;
+        }
+
+        private void DeleteSelectionFonc_Click(object sender, RoutedEventArgs e)
+        {
+            FonctionList.SelectedItem = null;
+        }
+
+        private void InputNom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            updatePersonnelsList();
+        }
+
+        private void updatePersonnelsList()
+        {
+            PersonnelList.ItemsSource = bdd.SelectPersonnels(ServiceList.SelectedItem, FonctionList.SelectedItem, InputNom.Text);
+        }
+
+        private void ServiceList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            updatePersonnelsList();
+        }
+
+        private void FonctionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            updatePersonnelsList();
         }
     }
 }

@@ -9,5 +9,7 @@ namespace AppTrombinoscope
     static class AppCache
     {
         public static DllbddPersonnels.BddPersonnels bdd;
+
+        public static Boolean isLoggedIn = false;
     }
 }
