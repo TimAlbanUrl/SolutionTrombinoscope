@@ -187,5 +187,15 @@ namespace DllbddPersonnels
             }
             return FetchAllPersonnels();
         }
+
+        public Service GetServiceFromId(int id)
+        {
+            return bdd.Services.Single(Service => Service.Id == id);
+        }
+
+        public Fonction GetFonctionFromId(int id)
+        {
+            return bdd.Fonctions.Single(Fonction=> Fonction.Id == id);
+        }
     }
 }
