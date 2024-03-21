@@ -2,10 +2,13 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace DllbddPersonnels
 {
@@ -95,6 +98,28 @@ namespace DllbddPersonnels
             fonc.Id = 0;
             fonc.Intitule = intitule;
             bdd.Fonctions.InsertOnSubmit(fonc);
+            bdd.SubmitChanges();
+        }
+
+        public void InsertPersonnel(string prenom, string nom, Service service, Fonction fonction, string telephone,
+            BitmapImage image)
+        {
+            Personnel pers = new Personnel();
+            pers.Fonction = fonction;
+            pers.Id = 0;
+            pers.Service = service;
+            pers.Nom = nom;
+            pers.Prenom = prenom;
+            byte[] data;
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(image));
+            using (MemoryStream ms = new MemoryStream())
+            {
+                encoder.Save(ms);
+                data = ms.ToArray();
+            }
+            pers.Photo = data;
+            bdd.Personnels.InsertOnSubmit(pers);
             bdd.SubmitChanges();
         }
 
