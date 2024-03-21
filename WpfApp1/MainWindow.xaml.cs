@@ -106,6 +106,11 @@ namespace WpfApp1
             gestServ.Show();
         }
 
+        private void ManagePersonels_Click(object sender, RoutedEventArgs e)
+        {
+            new PersonnelAjout().Show();
+        }
+
         private void DeleteSelectionServ_Click(object sender, RoutedEventArgs e)
         {
             ServiceList.SelectedItem = null;
@@ -135,5 +140,7 @@ namespace WpfApp1
         {
             updatePersonnelsList();
         }
+
+        
     }
 }
