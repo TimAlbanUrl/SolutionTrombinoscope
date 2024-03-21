@@ -31,6 +31,32 @@ namespace WpfApp1
                 AppTrombinoscope.AppCache.isLoggedIn = true;
                 Window mainWindow = Application.Current.MainWindow;
                 mainWindow.Title = mainWindow.Title + " (connecté)";
+                try
+                {
+                    MenuItem manageServices = mainWindow.FindName("ManageServices") as MenuItem;
+                    manageServices.IsEnabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                try {
+                    MenuItem manageFunctions = mainWindow.FindName("ManageFunctions") as MenuItem;
+                    manageFunctions.IsEnabled = true;
+                }
+                catch (Exception ex)
+                {
+                MessageBox.Show(ex.Message);
+                }
+                try {
+                    MenuItem managePersonnels = mainWindow.FindName("ManagePersonels") as MenuItem;
+                    managePersonnels.IsEnabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
                 Close();
             }
         }
