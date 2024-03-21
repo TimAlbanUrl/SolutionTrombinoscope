@@ -108,7 +108,7 @@ namespace WpfApp1
 
         private void ManagePersonels_Click(object sender, RoutedEventArgs e)
         {
-            new PersonnelAjout().Show();
+            new GestionPersonnels().Show();
         }
 
         private void DeleteSelectionServ_Click(object sender, RoutedEventArgs e)

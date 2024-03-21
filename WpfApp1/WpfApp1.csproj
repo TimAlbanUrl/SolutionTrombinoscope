@@ -124,6 +124,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GestionPersonnel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Personnels.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +136,9 @@
   <ItemGroup>
     <Compile Include="PersonnelAjout.xaml.cs">
       <DependentUpon>PersonnelAjout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel.xaml.cs">
+      <DependentUpon>GestionPersonnel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Personnels.xaml.cs">
       <DependentUpon>Personnels.xaml</DependentUpon>

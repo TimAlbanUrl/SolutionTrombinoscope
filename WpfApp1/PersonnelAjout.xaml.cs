@@ -52,5 +52,10 @@ namespace WpfApp1
                 ,(Fonction)FunctionMenu.SelectionBoxItem,ChampNumero.Text,(BitmapImage)imageProfil.Source);
             }
         }
+
+        private void ServiceMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

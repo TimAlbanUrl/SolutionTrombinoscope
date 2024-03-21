@@ -40,36 +40,5 @@ namespace WpfApp1
             }
             
         }
-        private void MenuContextSupprimerPersonnel_Click(object sender, RoutedEventArgs e)
-        {
-            bdd.DeletePersonnel(selected);
-        }
-
-        private void DataGridPersonnel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            selected = (BddpersonnelContext.Personnel)DataGridPersonnel.SelectedItem;
-            this.NomTextBox.Text = selected.Nom;
-            this.PrenomTextBox.Text = selected.Prenom;
-        }
-
-        private void NomTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            try
-            {
-                
-            }
-            catch (NullReferenceException)
-            {
-
-            }
-
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            bdd.UpdatePersonnel(selected, NomTextBox.Text, PrenomTextBox.Text);
-            this.DataGridPersonnel.ItemsSource = bdd.FetchAllPersonnels();
-        }
     }
 }
