@@ -141,6 +141,15 @@ namespace WpfApp1
             updatePersonnelsList();
         }
 
-        
+        private void PersonnelList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            BddpersonnelContext.Personnel personnel = (BddpersonnelContext.Personnel) PersonnelList.SelectedItem;
+            nameField.Text = personnel.Nom;
+            surnameField.Text = personnel.Prenom;
+            phoneField.Text = personnel.Telephone;
+
+            serviceField.Text = bdd.GetServiceFromId(personnel.IdService).Intitule;
+            functionField.Text = bdd.GetFonctionFromId(personnel.IdFonction).Intitule;
+        }
     }
 }

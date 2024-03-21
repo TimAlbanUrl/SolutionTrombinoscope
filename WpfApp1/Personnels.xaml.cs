@@ -52,24 +52,22 @@ namespace WpfApp1
             this.PrenomTextBox.Text = selected.Prenom;
         }
 
-        private void NomTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            try
-            {
-                
-            }
-            catch (NullReferenceException)
-            {
-
-            }
-
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             bdd.UpdatePersonnel(selected, NomTextBox.Text, PrenomTextBox.Text);
             this.DataGridPersonnel.ItemsSource = bdd.FetchAllPersonnels();
+        }
+
+        private void NomTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }
