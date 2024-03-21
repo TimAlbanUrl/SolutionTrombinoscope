@@ -187,17 +187,5 @@ namespace DllbddPersonnels
             }
             return FetchAllPersonnels();
         }
-
-        public String GetServiceIntituleFromPersonnel(Object obj)
-        {
-            Personnel pers = (Personnel)obj;
-            return bdd.Services.Single(Service => Service.Id == pers.IdService).Intitule;
-        }
-
-        public String GetFonctionIntituleFromPersonnel(Object obj)
-        {
-            Personnel pers = (Personnel)obj;
-            return bdd.Fonctions.Single(Fonction=> Fonction.Id == pers.IdFonction).Intitule;
-        }
     }
 }
