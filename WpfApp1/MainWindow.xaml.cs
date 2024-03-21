@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -150,6 +151,28 @@ namespace WpfApp1
 
             serviceField.Text = bdd.GetServiceFromId(personnel.IdService).Intitule;
             functionField.Text = bdd.GetFonctionFromId(personnel.IdFonction).Intitule;
+
+            if(personnel.Photo != null)
+            {
+                imagePreview.Source = ByteToImage(personnel.Photo);
+            } else
+            {
+                BitmapImage image = new BitmapImage(new Uri("./default-avatar-icon.jpg", UriKind.Relative));
+                imagePreview.Source = image;
+            }
+        }
+
+        public static ImageSource ByteToImage(byte[] imageData)
+        {
+            BitmapImage biImg = new BitmapImage();
+            MemoryStream ms = new MemoryStream(imageData);
+            biImg.BeginInit();
+            biImg.StreamSource = ms;
+            biImg.EndInit();
+
+            ImageSource imgSrc = biImg as ImageSource;
+
+            return imgSrc;
         }
     }
 }
